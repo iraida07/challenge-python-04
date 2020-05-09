@@ -1,22 +1,23 @@
 def div(func):
-    # You have to code here!
-    pass
+    def add_div(text):
+        return '<div>' + func(text) + '</div>'
+    return add_div
 
 
 def article(func):
-    # You have to code here!
-    pass
-
+    def add_article(text):
+        return '<article>' + func(text) + '</article>'
+    return add_article
 
 def p(func):
-    # You have to code here!
-    pass
+    def add_p(text):
+        return '<p>' + func(text) + '</p>'
+    return add_p
 
 
-# Here you must apply the decorators, uncomment this later
-# @div
-# @article
-# @p
+@div
+#@article
+#@p
 def saludo(nombre):
     return f'¡Hola {nombre}, ¿Cómo estás?'
 
@@ -28,8 +29,3 @@ def run():
 if __name__ == '__main__':
     run()
 
-# We want to have three different outputs 👇🏼
-
-# <div>¡Hola Jorge, ¿Cómo estás?'</div>
-# <article>¡Hola Jorge, ¿Cómo estás?'</article>
-# <p>¡Hola Jorge, ¿Cómo estás?'</p>
